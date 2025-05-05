@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice-Cream</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+     <!-- Correct FontAwesome Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- css -->
+
+
+
+<style>
+    /* nav bar styles */
+.navbar {
+    
+     background-color: #1c1c1c;
+    
+    color: white;
+   
+}
+#navbarNav  {
+   font-size: 20px;
+   
+   
+   
+}
+.navbar ul {
+    gap: 40px;
+    
+}
+.nav-link:hover {
+  font-weight: bold;
+  color: #FC95C4;
+}
+.login{
+  text-decoration: none;
+  color: #FC95C4;
+}
+.romyk {
+  color: #FC95C4;
+}
+.navbar-brand {
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
+/* background img set */
+.hero-section{
+    background-image: url("banner-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+/* sarosel buttons hidden */
+#next-icon1 {
+    visibility: hidden;
+}
+#prev{
+    visibility: hidden;
+}
+/* header icecream font */
+.head-ice {
+    font-size: 60px;
+    color: #222222;
+}
+.btn-success {
+    background-color: #FC95C4;
+}
+/* indicator box */
+.indicator-box {
+    padding: 10px;
+    color: darkgray;
+    
+}
+.pink {
+    color: pink;
+}
+/* about section styles */
+.about {
+  color: #222222;
+  font-weight: bold;
+}
+#abt-button {
+  background-color: #FC95C4;
+  padding: 10px;
+  width: 200px;
+  color: azure;
+}
+
+/* cards sections styles */
+.card-title {
+  font-weight: bolder;
+  font-size: 28px;
+  color: #222222;
+}
+.card-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #373736;
+}
+.cart {
+  border:1px solid #FC95C4;
+  border-radius: 60px;
+  color: #FC95C4;
+  padding: 10px;
+}
+.cart:hover{
+  background-color: #ff1e56;
+  color: aliceblue;
+}
+.button {
+  background-color: #FC95C4;
+  color: aliceblue;
+  width: 200px;
+
+}
+/* animation */
+.card:hover .card-title,
+    .card:hover .card-text {
+      animation: pulseText 0.8s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseText {
+      0% {
+        transform: scale(1);
+        color: #000;
+      }
+      100% {
+        transform: scale(1.05);
+        color: #ff69b4;
+      }
+    }
+.button:hover {
+  background-color: #1c1c1c;
+  color: azure;
+}
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+.card-img-top:hover {
+  background-color: bisque;
+  transform: scale(1.1);
+  overflow: hidden;
+
+}
+.card-container {
+  overflow: hidden;
+}
+.card-container:hover{
+  background-color: beige;
+}
+/* ice-cream services */
+.fa-ice-cream{
+  color: #FC95C4;
+
+}
+.head-services {
+  color: #D63384	;
+}
+.text-muted {
+  color: #6c757d	;
+}
+#service-button {
+  background-color: #FC95C4;
+  color: white;
+  width: 200px;
+}
+#service-button:hover {
+  background-color:  #ff4d6d;
+  color: aliceblue;
+  
+}
+.look:hover{
+  background-color: #f0a3c6;
+}
+/* testominial page style */
+#test-button {
+  background-color: #FC95C4;
+  color: white;
+  width: 200px;
+}
+/* footer page styles */
+.foot {
+  background-color: #373736;
+  color: white;
+}
+#group {
+  background-color: #FC95C4;
+  color: white;
+}
+.footer-links{
+  text-decoration: none;
+  color: white;
+}
+.icon-pink {
+  color: #D63384;
+}
+#foot-button{
+  background-color: #f476af;
+  color: white;
+  width: 200px;
+}
+/* copyrights */
+.jega {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+</style>
+    
+
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+        <a class="navbar-brand fw-bold-1" href="#">R<b class="romyk">O</b>MYK</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link " href="#Home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Ice-cream">Ice-cream</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Blog">Blog</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="#Contact">Contact Us</a></li>
+            </ul>
+            <a href="#" class="login">Login <i class="bi bi-person-fill"></i></a>
+        </div>
+    </div>
+</nav>
+<!-- header section -->
+ <header class="hero-section" id="Home">
+    
+ <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+        <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row align-items-center">
+          <!-- Left side content -->
+          <div class="col-md-6 p-5">
+            <h1 class="head-ice"><strong>Ice <br>Cream</strong></h1>
+            <p> is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+
+            </p>
+            <button class="btn btn-success">Order Now</button>
+          </div>
+          <!-- Right side image -->
+          <div class="col-md-6">
+            <img src="./banner-img.png" class="d-block w-100" alt="Slide 1 Image">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row align-items-center">
+          <div class="col-md-6 p-5">
+            <h1 class="head-ice"><strong>Ice<br>Cream</strong></h1>
+            <p> is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+            </p>                
+            <button class="btn btn-success">Order Now</button>
+          </div>
+          
+          <div class="col-md-6">
+            <img src="./banner-img.png" class="d-block w-100" alt="Slide 2 Image">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true" id="prev"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true" id="next-icon1"></span>
+    </button>
+
+  </div>
+  <div class="indicator-box">
+    <span class="active">01</span>
+    <span>02</span>
+    <span>03</span>
+    <span class="pink">04</span>
+  </div>
+</div>
+
+ 
+  
+</header>
+<!-- about section -->
+<div class="container mt-5" id="About">
+    <div class="row">
+        <div class="col-md-6 mt-5">
+            <img src="./about-img.png" alt="">
+        </div>
+        <div class="col-md-6 mt-5">
+            <h1 class="about">About Ice-Cream</h1>
+            <p>At [<b>Tasty-Cream</b>], we believe that dining is more than just food—it's an experience. Nestled in a warm and inviting setting, our restaurant blends elegant ambiance with rich flavors, creating the perfect atmosphere for a memorable meal.
+
+            From the soft lighting and cozy seating to the gentle background music, every detail is designed to offer a relaxing and enjoyable dining experience. Whether you're here for a romantic dinner, a family gathering, or a casual meal with friends, our welcoming space makes every moment special.
+            
+            Indulge in our carefully crafted menu, where fresh ingredients meet culinary expertise. Each dish is prepared with passion, ensuring that every bite is a journey of flavors.
+            
+            ✨ Experience great food in a great ambiance—only at [<b>Tasty Cream</b>]! </p>           
+            <button class="btn btn" id="abt-button">Read More</button>
+
+        </div>
+    </div>
+</div>
+<!-- card section -->
+<div class="container mt-4" id="Ice-cream">
+    <div class="row g-4">
+      <div class="col-md-4" >
+        <div class="card">
+          <div class="card-container">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/ME/GN/NS/93794828/strawberry-ice-cream-cone-500x500.jpg" 
+          class="card-img-top" alt="Image" height="420px">
+        </div>
+          <div class="card-body text-center">
+            <hr>
+            <h5 class="card-title ">$10</h5>
+            <p class="card-text ">Strawberry icecream</p>
+            <button class="btn btn cart">Add to cart</button>
+            
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-container">
+          <img src="https://static.vecteezy.com/system/resources/previews/044/570/761/non_2x/assortment-of-colorful-ice-cream-scoops-in-waffle-cones-with-fresh-fruits-on-a-transparent-background-png.png" 
+          class="card-img-top" alt="Image">
+        </div>
+          <div class="card-body text-center">
+            <hr>
+            <h5 class="card-title"> $10</h5>
+            <p class="card-text">Mango Byte.</p>
+            <button class="btn btn cart" >Add to cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-container">
+          <img src="https://pngfre.com/wp-content/uploads/ice-cream-png-image-from-pngfre-2.png" 
+          class="card-img-top " alt="" style="height: 415px;">
+        </div>
+          <div class="card-body text-center">
+            <hr>
+            <h5 class="card-title">$10</h5>
+            <p class="card-text">Blue-Berry.</p>
+            <button class="btn btn cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-container">
+          <img src="https://thumbs.dreamstime.com/b/mango-kulfi-also-spelled-khulfi-qulfi-popular-frozen-dairy-dessert-indian-subcontinent-often-described-as-88813688.jpg" 
+          class="card-img-top" alt="Image"height="300px">
+        </div>
+          <div class="card-body text-center">
+            <hr>
+            <h5 class="card-title">$10</h5>
+            <p class="card-text">Pista-Gulfi.</p>
+            <button class="btn btn cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-container">
+          <img src="https://thumbs.dreamstime.com/b/melting-chocolate-ice-cream-bar-chocolate-pieces-flying-aro-melting-chocolate-covered-ice-cream-bar-chocolate-shavings-361697702.jpg" 
+          class="card-img-top" alt="Image"height="300px">
+        </div>
+          <div class="card-body text-center">
+            <hr>
+            <h5 class="card-title">$10</h5>
+            <p class="card-text">Choco-Bar.</p>
+            <button class="btn btn cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-container">
+          <img src="https://i.pinimg.com/736x/e7/7e/8e/e77e8ee536b6c62c1fed4fc521d25ca6.jpg"
+           class="card-img-top" alt="Image" height="300px">
+          </div>
+          <div class="card-body text-center">
+            <hr>
+            <h5 class="card-title">$10</h5>
+            <p class="card-text">Vennila-cone.</p>
+            <button class="btn btn cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="d-flex justify-content-center">
+    <button class="btn btn button mt-5 text-center ">Book now</button>
+  </div>
+  </div>
+
+
+
+  <!-- our icecream services -->
+   <div class="container mt-5 " id="Services">
+    <div class="row ">
+        <h1>Our icecream Services</h1>
+        <div class="col-md-4 look mt-5" style="border: 1px solid #FC95C4; padding: 40px;" >
+            <h5 class="head-services"> <i class="fa-solid fa-ice-cream"></i>Ice Cream Sundae</h5>
+
+            <p class="card-text text-muted">Delicious ice cream sundaes layered with syrups, 
+            nuts, and fresh fruits. Perfect for every sweet craving!</p>
+
+
+        </div>
+        <div class="col-md-4 look  mt-5" style="border: 1px solid #FC95C4; padding: 40px;">
+            <h5 class="head-services"><i class="fa-solid fa-ice-cream"></i>Icecream Softserve</h5>
+            <p class="card-text text-muted">Smooth and creamy soft serve ice cream available in vanilla, chocolate, and swirl options.</p>
+
+
+        </div>
+        <div class="col-md-4 look mt-5" style="border: 1px solid #FC95C4; padding: 40px;">
+            <h5 class="head-services"><i class="fa-solid fa-ice-cream"></i>Icecream Geleto</h5>
+            <p class="card-text text-muted">Authentic Italian gelato with rich flavors and a silky texture, made fresh every day.</p>
+
+
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn mt-5 text-center " id="service-button">Book now</button>
+      </div>
+    </div>
+    <!-- testominial -->
+     <div class="container mt-5" id="Blog">
+        <div class="row">
+            <div class="col-md-12">
+                
+                    <h2 class="text-center fw-bold mb-5">Testimonial</h2>
+                  
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                  
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                          <div class="p-4 bg-white shadow rounded text-center mx-auto" style="max-width: 700px;">
+                            <p class="mb-4">
+                              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”
+                            </p>
+                            <h5 class="fw-bold mb-3">Marri Fen</h5>
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marri Fen" class="rounded-circle" width="100" height="100">
+                          </div>
+                        </div>
+                  
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                          <div class="p-4 bg-white shadow rounded text-center mx-auto" style="max-width: 700px;">
+                            <p class="mb-4">
+                              “Absolutely love the ice cream here! The flavors are unique and the service is excellent. Highly recommend to all dessert lovers.”
+                            </p>
+                            <h5 class="fw-bold mb-3">John Smith</h5>
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="John Smith" class="rounded-circle" width="100" height="100">
+                          </div>
+                        </div>
+                  
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                          <div class="p-4 bg-white shadow rounded text-center mx-auto" style="max-width: 700px;">
+                            <p class="mb-4">
+                              “From presentation to taste, everything is top-notch. My kids especially love the chocolate sundae!”
+                            </p>
+                            <h5 class="fw-bold mb-3">Priya D.</h5>
+                            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Priya D." class="rounded-circle" width="100" height="100">
+                          </div>
+                        </div>
+                  
+                      </div>
+                  
+                      <!-- Controls -->
+                      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-pink rounded-circle p-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-pink rounded-circle p-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn mt-5 text-center " id="test-button">Book now</button>
+              </div>
+           
+        </div>
+        <!-- footer page -->
+         <footer class="foot">
+         <div class="container mt-5" id="Contact">
+          <div class="row">
+            <div class="col-md-6">
+              <form class="mt-5">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+              
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+              
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+              
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Type your message here"></textarea>
+                </div>
+              
+                <button class="btn btn" id="foot-button">Submit</button>
+              </form>
+              
+             
+
+            </div>
+            <div class="col-md-6 mt-5">
+              <div class="d-flex justify-content-center gap-4">
+              <div class="mb-3">
+                <a href="https://maps.app.goo.gl/r4wEFmqkPEcvKaJ46" target="_blank" class="footer-links"><i class="bi bi-geo-alt-fill me-2 icon-pink "></i>Nagal Nagar,DGL</a>
+              </div>
+              
+              <div class="mb-3">
+                <a href="tel:+91 8072106966" class="footer-links"><i class="bi bi-telephone-fill me-2 icon-pink"></i>+91 8072106966</a>
+              </div>
+              
+              <div class="mb-3">
+                <a href="mailto:jegadeeshg2024@gmail.com" class="footer-links"><i class="bi bi-envelope-fill me-2 icon-pink"></i>jegadeeshg2024@gmail.com</a>
+              </div>
+              
+            </div>
+
+            <!-- newsletter grouping -->
+            <div class="input-group mt-5">
+              <input type="text" class="form-control" placeholder="Enter your email">
+              <button class="btn btn" type="button" id="group">Subscribe</button>
+            
+            </div>
+            <!-- social media logos -->
+
+            <div class="d-flex gap-3 mt-5 p-4">
+              <a href="https://www.facebook.com/home.php" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 40px; height: 40px;">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/?hl=en" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle bg-danger text-white" style="width: 40px; height: 40px;">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9148884" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle bg-info text-white" style="width: 40px; height: 40px;">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://x.com/home" class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"target="_blank" style="width: 40px; height: 40px;">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </div>
+            
+            
+          </div>
+          </div>
+          <hr class="mt-5">
+          <!-- copyrights -->
+          <p class="text-center mt-4 mb-0">
+            &copy; 2025 All Rights Reserved. Designed by <a href="#" target="_blank" class="jega">Jegadeesh</a>.
+          </p>
+          
+
+         </div>
+        </footer>
+    
+                
+  
+
+<script>
+   let button = document.getElementById("foot-button");
+
+button.addEventListener("click", (event) => {
+  event.preventDefault(); // 🔥 important if inside a form
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  if (name === "" || email === "" || phone === "" || message === "") {
+    alert("Please enter all values");
+  } else {
+    const booking = `Booking Details:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+    console.log(booking);
+    alert("Booking successful!");
+
+    // Clear the input fields
+    document.getElementById("name").querySelector("input").value = "";
+    document.getElementById("email").querySelector("input").value = "";
+    document.getElementById("phone").querySelector("input").value = "";
+    document.getElementById("message").querySelector("input").value = "";
+  }
+});
+
+</script>
+</body>
+</html>
+
+
+        </div>
+    </div>
+ </div>
+
+    
+</body>
+</html>
